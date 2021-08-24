@@ -1,3 +1,6 @@
+import { numsArray } from "array";
+
+
 const maxProduct = function (nums) {
 	const max1 = nums[0],
 		min1 = nums[0];
