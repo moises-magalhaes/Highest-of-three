@@ -1,24 +1,31 @@
-import { numsArray } from "array";
+import { numsNegativeArray } from "./array.js";
 
+console.log(numsNegativeArray);
 
-const maxProduct = function (nums) {
-	const max1 = nums[0],
-		min1 = nums[0];
-	const result = nums[0];
-	for (let i = 1; i < nums.length; i++) {
-		max1 *= nums[i];
-		min1 *= nums[i];
-		//If nums[i] negative swap max1 and min1
+numsNegativeArray.sort();
+console.log(numsNegativeArray);
 
-		if (nums[i] < 0) {
-			const tmp = max1;
-			max1 = min1;
-			min1 = tmp;
-		}
+const maxProduct = (numsNegativeArray = []) => {
+	const sorter = (a, b) => a - b;
+	numsNegativeArray.sort(sorter);
+	console.log(sorter);
+	let product1 = 1,
+		product2 = 1;
+	let len = numsNegativeArray.length - 1;
 
-		max1 = Math.max(max1, nums[i]);
-		min1 = Math.min(min1, nums[i]);
-		result = Math.max(res, max1);
+	for (let i = len; i > len - 3; i--) {
+		console.log((product1 = product1 * numsNegativeArray[i]));
+
+		return (product1 = product1 * numsNegativeArray[i]);
+		// console.log(
+		// 	numsNegativeArray[0] * numsNegativeArray[1] * numsNegativeArray[2]
+		// );
 	}
-	return result;
+
+	product2 =
+		numsNegativeArray[0] * numsNegativeArray[1] * numsNegativeArray[len];
+
+	return Math.max(product1, product2);
 };
+
+console.log(maxProduct(numsNegativeArray));
