@@ -1,14 +1,15 @@
 import { numsNegativeArray } from "./array.js";
 
-console.log(numsNegativeArray);
+// console.log(numsNegativeArray);
 
 numsNegativeArray.sort();
-console.log(numsNegativeArray);
+// console.log(numsNegativeArray);
 
 const maxProduct = (numsNegativeArray = []) => {
-	const sorter = (a, b) => a - b;
+	const sorter = (a, b) => b - a;
 	numsNegativeArray.sort(sorter);
-	console.log(sorter);
+	console.log(numsNegativeArray);
+
 	let product1 = 1,
 		product2 = 1;
 	let len = numsNegativeArray.length - 1;
@@ -24,6 +25,8 @@ const maxProduct = (numsNegativeArray = []) => {
 
 	product2 =
 		numsNegativeArray[0] * numsNegativeArray[1] * numsNegativeArray[len];
+
+	// console.log(product2);
 
 	return Math.max(product1, product2);
 };
