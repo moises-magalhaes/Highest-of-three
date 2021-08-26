@@ -40,6 +40,8 @@ HighestOf3(plusMinusArray);
 
 export function createHtml1() {
 	document.getElementById("model-1").innerHTML = `
-	<h1>${HighestOf3(plusMinusArray)}</h1>
+	<p>Considering the array: [1, 10, 2, -6, 5, -3]</p>
+
+	<h2>${HighestOf3(plusMinusArray)}</h2>
    `;
 }

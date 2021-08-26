@@ -13,6 +13,7 @@ for (let i = 0; i < 3; i++) {
 
 export function createHtml2() {
 	document.getElementById("model-2").innerHTML = `
-	<h1>${positive}</h1>
+	<p>Considering the array: [1, 10, 2, 6, 5, 3]</p>
+	<h2>${positive}</h2>
    `;
 }
